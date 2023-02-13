@@ -78,7 +78,7 @@ class MongoDBOplogBookmarks(unittest.TestCase):
         return "tap_tester_mongodb_oplog_bookmarks"
 
     def tap_name(self):
-        return "tap-mongodb"
+        return "dz-tap-mongodb"
 
     def get_type(self):
         return "platform.mongodb"

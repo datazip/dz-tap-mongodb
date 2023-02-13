@@ -78,7 +78,7 @@ class MongoDBCollectionNameRestrictions(unittest.TestCase):
         return "tap_tester_mongodb_cname_restrict"
 
     def tap_name(self):
-        return "tap-mongodb"
+        return "dz-tap-mongodb"
 
     def get_type(self):
         return "platform.mongodb"

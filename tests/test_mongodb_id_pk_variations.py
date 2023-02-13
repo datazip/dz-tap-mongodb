@@ -189,7 +189,7 @@ class MongoDbPrimaryKeyIdVariation(unittest.TestCase):
         return "tap_tester_mongodb_id_pk_variations"
 
     def tap_name(self):
-        return "tap-mongodb"
+        return "dz-tap-mongodb"
 
     def get_type(self):
         return "platform.mongodb"

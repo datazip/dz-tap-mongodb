@@ -2,7 +2,7 @@
 
 from setuptools import setup
 
-setup(name='tap-mongodb',
+setup(name='dz-dz-tap-mongodb',
       version='2.1.2',
       description='Singer.io tap for extracting data from MongoDB',
       author='Stitch',
@@ -25,7 +25,7 @@ setup(name='tap-mongodb',
       },
       entry_points='''
           [console_scripts]
-          tap-mongodb=tap_mongodb:main
+          dz-dz-tap-mongodb=tap_mongodb:main
       ''',
       packages=['tap_mongodb', 'tap_mongodb.sync_strategies'],
 

@@ -1,17 +1,17 @@
-# tap-mongodb
+# dz-tap-mongodb
 
 This is a [Singer](https://singer.io) tap that produces JSON-formatted data following the [Singer spec](https://github.com/singer-io/getting-started/blob/master/SPEC.md) from a MongoDB source.
 
 ## Set up Virtual Environment
 ```
-python3 -m venv ~/.virtualenvs/tap-mongodb
-source ~/.virtualenvs/tap-mongodb/bin/activate
+python3 -m venv ~/.virtualenvs/dz-tap-mongodb
+source ~/.virtualenvs/dz-tap-mongodb/bin/activate
 ```
 
 ## Install tap
 ```
 pip install -U pip setuptools
-pip install tap-mongodb
+pip install dz-tap-mongodb
 ```
 
 ## Set up Config file
@@ -26,7 +26,7 @@ Create json file called `config.json`, with the following contents:
 }
 ```
 
-All of the above attributes are required by the tap to connect to your mongo instance. 
+All of the above attributes are required by the tap to connect to your mongo instance.
 
 
 Alternatively, you can use a database URL to connect in which case the above settings will be ignored and are thus optional.
@@ -52,7 +52,7 @@ The following parameters are optional for your config file:
 ## Run in discovery mode
 Run the following command and redirect the output into the catalog file
 ```
-tap-mongodb --config ~/config.json --discover > ~/catalog.json
+dz-tap-mongodb --config ~/config.json --discover > ~/catalog.json
 ```
 
 Your catalog file should now look like this:
@@ -99,7 +99,7 @@ To select a stream, enter the following to the stream's metadata:
 
 To add a projection to a stream, add the following to the stream's metadata field:
 ```
-"tap-mongodb.projection": <projection>
+"dz-tap-mongodb.projection": <projection>
 ```
 
 For example, if you were to edit the example stream to select the stream as well as add a projection, config.json should look this:
@@ -124,7 +124,7 @@ For example, if you were to edit the example stream to select the stream as well
             ],
             "selected": true,
             "replication-method": "<replication method>",
-            "tap-mongodb.projection": "<projection>"
+            "dz-tap-mongodb.projection": "<projection>"
           }
         }
       ],
@@ -138,14 +138,14 @@ For example, if you were to edit the example stream to select the stream as well
 
 ```
 ## Run in sync mode:
-`tap-mongodb --config ~/config.json --catalog ~/catalog.json`
+`dz-tap-mongodb --config ~/config.json --catalog ~/catalog.json`
 
 The tap will write bookmarks to stdout which can be captured and passed as an optional `--state state.json` parameter to the tap for the next sync.
 
 ## Supplemental MongoDB Info
 
 ### Local MongoDB Setup
-If you haven't yet set up a local mongodb client, follow [these instructions](https://github.com/singer-io/tap-mongodb/blob/master/spikes/local_mongo_setup.md)
+If you haven't yet set up a local mongodb client, follow [these instructions](https://github.com/singer-io/dz-tap-mongodb/blob/master/spikes/local_mongo_setup.md)
 
 ---
 

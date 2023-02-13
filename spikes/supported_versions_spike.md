@@ -1,4 +1,4 @@
-# tap-mongodb suppored versions & flavors spike
+# dz-tap-mongodb suppored versions & flavors spike
 
 ## Connecting to mongodb (shell and via pymongo)
 ### Mongo Shell

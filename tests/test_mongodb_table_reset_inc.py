@@ -108,7 +108,7 @@ class MongoDBTableResetInc(TestCase):
         return "tap_tester_mongodb_table_reset_inc"
 
     def tap_name(self):
-        return "tap-mongodb"
+        return "dz-tap-mongodb"
 
     def get_type(self):
         return "platform.mongodb"

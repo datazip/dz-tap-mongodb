@@ -172,7 +172,7 @@ class MongoDBDiscovery(unittest.TestCase):
         return "mongodb_discovery"
 
     def tap_name(self):
-        return "tap-mongodb"
+        return "dz-tap-mongodb"
 
     def get_type(self):
         return "platform.mongodb"

@@ -113,7 +113,7 @@ class MongoDBDatatype(unittest.TestCase):
         return "tap_tester_mongodb_datatype"
 
     def tap_name(self):
-        return "tap-mongodb"
+        return "dz-tap-mongodb"
 
     def get_type(self):
         return "platform.mongodb"
