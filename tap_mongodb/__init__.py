@@ -253,12 +253,11 @@ def get_connection_string(config: Dict):
 
     Returns: A MongoClient connection string
     """
-    srv = config.get('srv') == 'true'
+    srv = config.get('srv') == True
 
     # Default SSL verify mode to true, give option to disable
-    verify_mode = config.get('verify_mode', 'true') == 'true'
-    use_ssl = config.get('ssl') == 'true'
-
+    verify_mode = config.get('verify_mode', True) == True
+    use_ssl = config.get('ssl') == True
     connection_query = {
         'readPreference': 'secondaryPreferred',
         'authSource': config['auth_database'],
