@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.0
+Fixed bug with LOG_BASED after full table load
+
 ## 1.3.2
 Added flag to trigger full table load when performing LOG_BASED replication with no previous state token present.
 
