@@ -9,17 +9,17 @@ import singer
 from pymongo import MongoClient
 from singer import metadata, metrics, utils
 
-from tap_mongodb.sync_strategies import change_streams
-from tap_mongodb.sync_strategies import common
-from tap_mongodb.sync_strategies import full_table
-from tap_mongodb.sync_strategies import incremental
-from tap_mongodb.config_utils import validate_config
-from tap_mongodb.db_utils import get_databases, produce_collection_schema
-from tap_mongodb.errors import InvalidReplicationMethodException, NoReadPrivilegeException
-from tap_mongodb.stream_utils import is_log_based_stream, is_stream_selected, write_schema_message, \
+from dz_mongodb.sync_strategies import change_streams
+from dz_mongodb.sync_strategies import common
+from dz_mongodb.sync_strategies import full_table
+from dz_mongodb.sync_strategies import incremental
+from dz_mongodb.config_utils import validate_config
+from dz_mongodb.db_utils import get_databases, produce_collection_schema
+from dz_mongodb.errors import InvalidReplicationMethodException, NoReadPrivilegeException
+from dz_mongodb.stream_utils import is_log_based_stream, is_stream_selected, write_schema_message, \
     streams_list_to_dict, filter_streams_by_replication_method, get_streams_to_sync
 
-LOGGER = singer.get_logger('tap_mongodb')
+LOGGER = singer.get_logger('dz_mongodb')
 
 REQUIRED_CONFIG_KEYS = [
     'host',

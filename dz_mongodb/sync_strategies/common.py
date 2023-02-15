@@ -13,7 +13,7 @@ from bson import objectid, timestamp, datetime as bson_datetime
 from singer import utils, metadata
 from terminaltables import AsciiTable
 
-from tap_mongodb.errors import MongoInvalidDateTimeException, SyncException, UnsupportedKeyTypeException
+from dz_mongodb.errors import MongoInvalidDateTimeException, SyncException, UnsupportedKeyTypeException
 
 SDC_DELETED_AT = "_sdc_deleted_at"
 INCLUDE_SCHEMAS_IN_DESTINATION_STREAM_NAME = False

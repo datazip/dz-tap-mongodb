@@ -8,7 +8,7 @@ from typing import Dict, Optional, List, Tuple
 import singer
 from singer import metadata, write_message, SchemaMessage
 
-from tap_mongodb.sync_strategies.common import calculate_destination_stream_name
+from dz_mongodb.sync_strategies.common import calculate_destination_stream_name
 
 
 def get_replication_method_from_stream(stream: Dict) -> Optional[str]:

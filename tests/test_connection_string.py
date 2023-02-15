@@ -1,6 +1,6 @@
 import unittest
 
-from tap_mongodb import get_connection_string
+from dz_mongodb import get_connection_string
 
 
 class TestConnectionString(unittest.TestCase):

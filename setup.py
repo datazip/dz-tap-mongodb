@@ -4,20 +4,20 @@ from setuptools import setup
 with open('README.md', 'r') as fh:
     long_desc = fh.read()
 
-setup(name='dz-tap-mongodb',
+setup(name='dz-mongodb',
       version='1.4.0',
       description='Singer.io tap for extracting data from MongoDB - Datazip compatible',
       long_description=long_desc,
       long_description_content_type='text/markdown',
       author='Wise',
-      url='https://github.com/datazip/dz-tap-mongodb',
+      url='https://github.com/datazip/dz-mongodb',
       classifiers=[
           'Programming Language :: Python :: 3 :: Only',
           'Programming Language :: Python :: 3.6',
           'Programming Language :: Python :: 3.7',
           'Programming Language :: Python :: 3.8',
       ],
-      py_modules=['tap_mongodb'],
+      py_modules=['dz_mongodb'],
       install_requires=[
           'pipelinewise-singer-python==1.*',
           'pymongo==4.3.*',
@@ -37,7 +37,7 @@ setup(name='dz-tap-mongodb',
       },
       entry_points='''
           [console_scripts]
-          dz-tap-mongodb=tap_mongodb:main
+          dz-mongodb=dz_mongodb:main
       ''',
-      packages=['tap_mongodb', 'tap_mongodb.sync_strategies'],
+      packages=['dz_mongodb', 'dz_mongodb.sync_strategies'],
 )

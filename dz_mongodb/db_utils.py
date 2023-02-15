@@ -10,7 +10,7 @@ from pymongo.collection import Collection
 from pymongo.database import Database
 from singer import metadata
 
-LOGGER = singer.get_logger('tap_mongodb')
+LOGGER = singer.get_logger('dz_mongodb')
 
 IGNORE_DBS = ['system', 'local', 'config']
 ROLES_WITHOUT_FIND_PRIVILEGES = {

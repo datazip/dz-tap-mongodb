@@ -10,8 +10,8 @@ from datetime import datetime
 from bson import ObjectId, Timestamp, MinKey
 from dateutil.tz import tzutc
 
-import tap_mongodb.sync_strategies.common as common
-from tap_mongodb.errors import UnsupportedKeyTypeException
+import dz_mongodb.sync_strategies.common as common
+from dz_mongodb.errors import UnsupportedKeyTypeException
 
 
 class TestRowToSchemaMessage(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestRowToSchemaMessage(unittest.TestCase):
                 }
             ]
         }
-        with patch('tap_mongodb.common.INCLUDE_SCHEMAS_IN_DESTINATION_STREAM_NAME') as constant_mock:
+        with patch('dz_mongodb.common.INCLUDE_SCHEMAS_IN_DESTINATION_STREAM_NAME') as constant_mock:
             constant_mock.return_value = True
             self.assertEqual('myDb-myStream', common.calculate_destination_stream_name(stream))
 

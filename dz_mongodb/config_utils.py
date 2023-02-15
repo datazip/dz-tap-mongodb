@@ -1,7 +1,7 @@
 from typing import Dict
 
-from tap_mongodb.errors import InvalidAwaitTimeError, InvalidLogBasedFullLoadOnEmptyState, InvalidUpdateBufferSizeError
-from tap_mongodb.sync_strategies import change_streams
+from dz_mongodb.errors import InvalidAwaitTimeError, InvalidLogBasedFullLoadOnEmptyState, InvalidUpdateBufferSizeError
+from dz_mongodb.sync_strategies import change_streams
 
 
 def validate_config(config: Dict) -> None:

@@ -8,9 +8,9 @@ from typing import Optional, Dict
 from pymongo.collection import Collection
 from singer import utils
 
-from tap_mongodb.sync_strategies import common
+from dz_mongodb.sync_strategies import common
 
-LOGGER = singer.get_logger('tap_mongodb')
+LOGGER = singer.get_logger('dz_mongodb')
 
 
 def get_max_id_value(collection: Collection) -> Optional[str]:

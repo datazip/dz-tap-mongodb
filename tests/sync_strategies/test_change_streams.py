@@ -9,8 +9,8 @@ from pymongo.collection import Collection
 from pymongo.database import Database
 from singer import RecordMessage
 
-import tap_mongodb.sync_strategies.change_streams as change_streams
-from tap_mongodb.sync_strategies import common
+import dz_mongodb.sync_strategies.change_streams as change_streams
+from dz_mongodb.sync_strategies import common
 
 
 class TestChangeStreams(unittest.TestCase):
@@ -127,8 +127,8 @@ class TestChangeStreams(unittest.TestCase):
         self.assertEqual({'_data': '825EBCF4CF000000972B022C0100296E5A1004A50DD58E7B964E14B0FC769A85D61D5646645F696400645EBCF4CF5A06C441DC02E1080004'},
         change_streams.get_token_from_state({'mydb-stream1','mydb-stream2','mydb-stream3','mydb-stream5'}, state))
 
-    @patch('tap_mongodb.sync_strategies.change_streams.singer.write_message')
-    @patch('tap_mongodb.sync_strategies.change_streams.get_buffer_rows_from_db')
+    @patch('dz_mongodb.sync_strategies.change_streams.singer.write_message')
+    @patch('dz_mongodb.sync_strategies.change_streams.get_buffer_rows_from_db')
     def test_sync_database(self, get_buffer_rows_from_db_mock, write_message_mock):
         common.SCHEMA_COUNT['mydb-stream1'] = 0
         common.SCHEMA_COUNT['mydb-stream2'] = 0
@@ -363,8 +363,8 @@ class TestChangeStreams(unittest.TestCase):
         self.assertEqual(common.COUNTS['mydb-stream2'], 2)
         self.assertEqual(common.COUNTS['mydb-stream3'], 0)
 
-    @patch('tap_mongodb.sync_strategies.change_streams.singer.write_message')
-    @patch('tap_mongodb.sync_strategies.change_streams.get_buffer_rows_from_db')
+    @patch('dz_mongodb.sync_strategies.change_streams.singer.write_message')
+    @patch('dz_mongodb.sync_strategies.change_streams.get_buffer_rows_from_db')
     def test_flush_buffer_with_3_rows_returns_3(self, get_rows_mock, write_message_mock):
         common.SCHEMA_COUNT['mydb-stream1'] = 0
         common.SCHEMA_COUNT['mydb-stream2'] = 0

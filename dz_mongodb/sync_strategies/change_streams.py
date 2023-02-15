@@ -8,9 +8,9 @@ from pymongo.collection import Collection
 from pymongo.database import Database
 from singer import utils
 
-from tap_mongodb.sync_strategies import common
+from dz_mongodb.sync_strategies import common
 
-LOGGER = singer.get_logger('tap_mongodb')
+LOGGER = singer.get_logger('dz_mongodb')
 
 RESUME_TOKEN_KEY = 'token'
 DEFAULT_AWAIT_TIME_MS = 1000  # the server default https://docs.mongodb.com/manual/reference/method/db.watch/#db.watch

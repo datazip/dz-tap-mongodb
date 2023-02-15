@@ -1,4 +1,4 @@
-# dz-tap-mongodb
+# dz-mongodb
 
 This is a [Singer](https://singer.io) tap that produces JSON-formatted data following the [Singer spec](https://github.com/singer-io/getting-started/blob/master/SPEC.md) from a MongoDB source.
 
@@ -46,7 +46,7 @@ here is a [sample configuration file](./sample_config.json).
 ## Run in discovery mode
 Run the following command and redirect the output into the catalog file
 ```shell script
-dz-tap-mongodb --config ~/config.json --discover > ~/catalog.json
+dz-mongodb --config ~/config.json --discover > ~/catalog.json
 ```
 
 Your catalog file should now look like this:
@@ -128,7 +128,7 @@ For example, if you were to edit the example stream to select the stream as well
 ```
 ## Run in sync mode:
 ```shell script
-dz-tap-mongodb --config ~/config.json --catalog ~/catalog.json
+dz-mongodb --config ~/config.json --catalog ~/catalog.json
 ```
 
 The tap will write bookmarks to stdout which can be captured and passed as an optional `--state state.json` parameter to the tap for the next sync.

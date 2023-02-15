@@ -8,9 +8,9 @@ from typing import Dict, Optional
 from pymongo.collection import Collection
 from singer import metadata, utils
 
-from tap_mongodb.sync_strategies import common
+from dz_mongodb.sync_strategies import common
 
-LOGGER = singer.get_logger('tap_mongodb')
+LOGGER = singer.get_logger('dz_mongodb')
 
 
 def update_bookmark(row: Dict, state: Dict, tap_stream_id: str, replication_key_name: str) -> None:
