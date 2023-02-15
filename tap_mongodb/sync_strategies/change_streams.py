@@ -164,7 +164,10 @@ def sync_database(database: Database,
 
                 break
 
-            tap_stream_id = f'{change["ns"]["db"]}-{change["ns"]["coll"]}'
+            database_name = change["ns"]["db"]
+            # remove the prefix from the database name
+            database_name = database_name.split('_', 1)[-1]
+            tap_stream_id = f'{database_name}-{change["ns"]["coll"]}'
 
             operation = change['operationType']
 
